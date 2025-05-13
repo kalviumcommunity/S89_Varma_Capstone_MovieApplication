@@ -6,6 +6,10 @@ Movie Hub is a comprehensive platform designed to revolutionize how developers c
 ## Project Description
 Movie Hub addresses the common challenges developers face in building their professional network and finding meaningful collaboration opportunities. The platform combines project showcasing, skill matching, mentorship connections, and real-time collaboration tools into one seamless experience.
 
+
+
+
+
 ### Key Features
 - User authentication and detailed developer profiles
 - Project showcase and discovery system
