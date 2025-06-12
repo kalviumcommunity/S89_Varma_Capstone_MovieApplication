@@ -32,7 +32,25 @@ router.post('/signin', async (req, res) => {
 
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
 
-    res.json({ token, user: { id: user._id, name: user.name, email: user.email } });
+res.json({ 
+      msg: 'Login successful', 
+      token, 
+      user: { id: user._id, name: user.name, email: user.email } 
+    });  } catch (err) {
+    res.status(500).json({ msg: 'Server error' });
+  }
+});
+
+router.put('/user/:id', async (req, res) => {
+  const { name, email } = req.body;
+  try {
+    const updatedUser = await User.findByIdAndUpdate(
+      req.params.id,
+      { name, email },
+      { new: true }
+    );
+    if (!updatedUser) return res.status(404).json({ msg: 'User not found' });
+    res.json({ msg: 'User updated', user: updatedUser });
   } catch (err) {
     res.status(500).json({ msg: 'Server error' });
   }
