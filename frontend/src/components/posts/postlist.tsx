@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import PostCard from "./PostCard";
+import PostCard from "./postcard";
 
 const PostList = () => {
   const [posts, setPosts] = useState([]);
