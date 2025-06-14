@@ -1,21 +1,21 @@
-// components/auth/SignUp.jsx
-import React from 'react';
-import './Auth.css';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import axios from 'axios';
 
-const SignUp = () => {
+export default function SignUp() {
+  const [form, setForm] = useState({ username: '', password: '' });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    await axios.post('http://localhost:5000/api/auth/signup', form);
+    alert('Signed up!');
+  };
+
   return (
-    <div className="auth-container">
-      <h2>Create an Account</h2>
-      <form className="auth-form">
-        <input type="text" placeholder="Name" required />
-        <input type="email" placeholder="Email" required />
-        <input type="password" placeholder="Password" required />
-        <button type="submit">Sign Up</button>
-        <p>Already have an account? <Link to="/signin">Sign In</Link></p>
-      </form>
-    </div>
+    <form onSubmit={handleSubmit}>
+      <h2>Sign Up</h2>
+      <input placeholder="Username" onChange={e => setForm({ ...form, username: e.target.value })} />
+      <input type="password" placeholder="Password" onChange={e => setForm({ ...form, password: e.target.value })} />
+      <button type="submit">Register</button>
+    </form>
   );
-};
-
-export default SignUp;
+}
