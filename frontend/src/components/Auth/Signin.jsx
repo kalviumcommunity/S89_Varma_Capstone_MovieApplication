@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './Auth.css';
 
-export default function SignIn() {
+const SignIn =()=> {
   const [form, setForm] = useState({ username: '', password: '' });
   const [error, setError] = useState('');
   const navigate = useNavigate();
@@ -49,3 +49,4 @@ export default function SignIn() {
   );
 }
 
+export default SignIn;

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './Auth.css';
 
-export default function SignUp() {
+const SignUp=()=> {
   const [form, setForm] = useState({ username: '', password: '' });
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
@@ -48,3 +48,5 @@ export default function SignUp() {
     </div>
   );
 }
+
+export default SignUp;
