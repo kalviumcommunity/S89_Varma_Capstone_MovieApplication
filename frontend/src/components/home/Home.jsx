@@ -32,7 +32,9 @@ const Home = () => {
   return (
     <div className="home">
       <h1 className="maflix-title">Maflix 🎬</h1>
-      <button className="login-button" onClick={() => navigate('/login')}>Login</button>
+      <button className="signin-button" onClick={() => navigate('/signin')}>Sign In</button>
+    
+
       <button className="signup-button" onClick={() => navigate('/signup')}>Sign Up</button>
       <p className="description">
         Discover the latest movies and TV shows, watch trailers, and get

@@ -47,7 +47,7 @@
   cursor:pointer;
   transition: background 0.2s;
 }
-      .login-button,
+      .signin-button,
       .signup-button {
         background-color: #e50914;
         color: #fff;
