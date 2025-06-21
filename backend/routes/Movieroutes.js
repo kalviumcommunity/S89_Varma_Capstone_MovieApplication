@@ -3,12 +3,12 @@ const express = require("express");
 const router = express.Router();
 const Movie = require("../models/Movie");
 
+
 // DELETE
 router.delete("/:id", async (req, res) => {
   await Movie.findByIdAndDelete(req.params.id);
   res.send({ message: "Deleted" });
 });
-
 
 
 // PUT (Update)
