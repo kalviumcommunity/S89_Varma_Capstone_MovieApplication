@@ -9,6 +9,8 @@ router.delete("/:id", async (req, res) => {
   res.send({ message: "Deleted" });
 });
 
+
+
 // PUT (Update)
 router.put("/:id", async (req, res) => {
   const { title, poster } = req.body;

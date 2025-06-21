@@ -23,6 +23,17 @@ const movies = [
     image: "https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg",
     trailer: "https://www.youtube.com/embed/YoHD9XEInc0"
   },
+   {
+    title:"Peddi",
+    image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiqG0efgvW3h6xnvyLDgXDi4tZ4qaLL2HB1-b2vZ2rh-UgE56Yv7T95HBYqw4S_vXCRkpCuVkB7XA2G5JR3qWdX94mKXJrOQ5dBJSvYilVpmxDFeU1-PKUxShMMco4WqUfguVeNCKK_jT7S3kkr6-svl6AU3er8BeoE-Yn4mkZG7j3bX3sihWylG2CAc6_j/s4433/ram-charan-peddi-UHD.jpg",
+          trailer: " https://bit.ly/2I6NFse"
+        },
+        {
+         title: "RRR", 
+        image: "https://sp.yimg.com/ib/th?id=OIP.GpQfqeUkOkxOi1eekYMlbQHaNL&pid=Api&w=148&h=148&c=7&dpr=2&rs=1",
+         trailer: "https://youtu.be/NgBoMJy386M?si=HKRHGrc5eidSx1GV"             
+        },
+
 ];
 
 const Home = () => {
