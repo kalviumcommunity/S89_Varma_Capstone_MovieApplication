@@ -23,3 +23,14 @@ router.put("/:id", async (req, res) => {
 });
 
 module.exports = router;
+
+router.post("/", async (req, res) => {
+  try {
+    const { title, poster } = req.body;
+    const movie = new Movie({ title, poster });
+    await movie.save();
+    res.status(201).send(movie);
+  } catch (error) {
+    res.status(400).send({ error: error.message });
+  }
+});
