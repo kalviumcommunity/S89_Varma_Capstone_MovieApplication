@@ -43,3 +43,4 @@ https://s89-varma-capstone-movieapplication.onrender.com/
 
 frontend deployed link
 https://app.netlify.com/projects/capstonmovieapplication/overview
+https://capstonmovieapplication.netlify.app/
