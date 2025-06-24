@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/User');
 
+
+
 // Sign Up
 router.post('/signup', async (req, res) => {
   const { username, password } = req.body;
@@ -32,6 +34,7 @@ router.post('/signin', async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
 
 
 
